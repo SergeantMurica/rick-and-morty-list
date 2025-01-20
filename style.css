@@ -1,0 +1,135 @@
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    background: radial-gradient(circle, #4CAF50, #2C3E50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+}
+
+#characters-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #29B6F6, #FFEB3B);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    color: #333;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+img.character-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #FFF;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+img.character-image:hover {
+    transform: scale(1.2) rotate(-5deg);
+    border-color: #FF5722;
+}
+
+.attribute {
+    font-weight: bold;
+    color: #FF5722;
+}
+
+.character-detail {
+    margin: 4px;
+    color: #333;
+    text-align: center;
+}
+
+.character-info {
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #9C27B0;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #D500F9;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1275px) {
+    #characters-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    #characters-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #characters-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        width: 100px;
+        height: 125px;
+        padding: 20px;
+    }
+    img.character-image {
+        width: 80px;
+        height: 80px;
+    }
+    .attribute {
+        font-size: 12px;
+    }
+
+    .character-detail {
+        font-size: 10px;
+    }
+}
+
