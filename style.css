@@ -115,15 +115,18 @@ button:hover {
     #characters-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .card {
         width: 100px;
         height: 125px;
         padding: 20px;
     }
+
     img.character-image {
         width: 80px;
         height: 80px;
     }
+
     .attribute {
         font-size: 12px;
     }
